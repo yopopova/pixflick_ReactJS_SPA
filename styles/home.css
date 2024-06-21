@@ -1,0 +1,41 @@
+#hero-image {
+    background-image: url('https://images3.alphacoders.com/135/thumb-1920-1358834.jpeg');
+    height: 40vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#banner-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+#banner-text > h1 {
+    font-size: 3vw;
+    text-shadow: 1px 0 10px #000000;
+}
+
+#btns {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+#btns > a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1vw;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #E50914;
+    border-radius: 8px;
+    padding: 8px 15px;
+    width: 7em;
+}
