@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Register</title>
+    <script src="https://kit.fontawesome.com/e7629d8c19.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="#">
+                <span class="red">pix</span><span class="white">flick</span><span class="red">.</span>
+            </a>
+        </div>
+
+        <nav class="nav">
+            <a href="#">Home</a>
+            <a href="#">Movies</a>
+
+            <div id="guest">
+                <a href="#">Register</a>
+                <a class="log" href="#">Login</a>
+            </div>
+
+            <div id="user">
+                <a href="#">Add Movie</a>
+                <a class="log" href="#">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <form id="register">
+                <h1>Create an account</h1>
+
+                <div id="wrapper">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com">
+
+                    <label for="register-pass">Password:</label>
+                    <input type="password" id="register-password" name="password" placeholder="**********">
+
+                    <label for="con-pass">Confirm password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="**********">
+
+                    <input type="submit" class="submit-btn" value="Register">
+
+                    <p>Already have an account? <a href="#">Login</a></p>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
