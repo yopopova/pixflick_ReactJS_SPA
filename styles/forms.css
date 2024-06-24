@@ -42,6 +42,11 @@ section {
     width: 20em;
 }
 
+textarea {
+    border-radius: 8px;
+    padding: 5px;
+}
+
 .submit-btn {
     text-align: center;
     font-size: 1vw;
