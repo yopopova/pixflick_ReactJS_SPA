@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Add movie</title>
+    <script src="https://kit.fontawesome.com/e7629d8c19.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="#">
+                <span class="red">pix</span><span class="white">flick</span><span class="red">.</span>
+            </a>
+        </div>
+
+        <nav class="nav">
+            <a href="#">Home</a>
+            <a href="#">Movies</a>
+
+            <div id="guest">
+                <a href="#">Register</a>
+                <a class="log" href="#">Login</a>
+            </div>
+
+            <div id="user">
+                <a href="#">Add Movie</a>
+                <a class="log" href="#">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <form id="login">
+                <h1>Add Movie</h1>
+
+                <div id="wrapper">
+                    <label for="leg-title">Title:</label>
+                    <input type="text" id="title" name="title" placeholder="Enter title">
+
+                    <label for="genre">Genre:</label>
+                    <input type="text" id="genre" name="genre" placeholder="Enter genre">
+
+                    <label for="year">Year:</label>
+                    <input type="text" id="year" name="year" placeholder="Enter year">
+
+                    <label for="poster">Poster:</label>
+                    <input type="text" id="poster" name="poster" placeholder="Add poster">
+
+                    <label for="wallpaper">Wallpaper:</label>
+                    <input type="text" id="wallpaper" name="wallpaper" placeholder="Add wallpaper">
+
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" rows="4" cols="50"></textarea>
+
+                    <input type="submit" class="submit-btn" value="Add">
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
