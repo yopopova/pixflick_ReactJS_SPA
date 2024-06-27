@@ -1,0 +1,56 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #000000;
+}
+
+.logo > a { 
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.red {
+    color: #E50914;
+}
+
+.white {
+    color: white;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+#guest, #user {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    color: #E50914;
+    transition: all 0.2s ease-in-out;
+}
+
+.log {
+    background-color: #E50914;
+    border-radius: 8px;
+    padding: 8px 15px;
+}
+
+.nav a[class*="login"]:hover {
+    color: #ffffff;
+}
