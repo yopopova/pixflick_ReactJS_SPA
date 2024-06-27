@@ -1,9 +1,18 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
+import Header from './components/header/Header';
+
 function App() {
   return (
-    <>
-      <h1>Hello world</h1>
-    </>
-  )
+    <div>
+    {/* <div className='app'>
+        <FontAwesomeIcon icon={faEnvelope} />
+    </div> */}
+
+      <Header />
+    </div>
+  );
 }
 
-export default App
+export default App;
