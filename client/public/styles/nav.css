@@ -40,7 +40,7 @@
     font-weight: bold;
 }
 
-.nav a:hover {
+.nav a:not(.log):hover {
     color: #E50914;
     transition: all 0.2s ease-in-out;
 }
@@ -49,8 +49,4 @@
     background-color: #E50914;
     border-radius: 8px;
     padding: 8px 15px;
-}
-
-.nav a[class*="login"]:hover {
-    color: #ffffff;
 }
