@@ -1,24 +1,26 @@
+import { Link } from "react-router-dom";
+
 export default function Header() {
     return (
         <header className="header">
             <div className="logo">
-                <a href="#">
+                <Link to="/">
                     <span className="red">pix</span><span className="white">flick</span><span className="red">.</span>
-                </a>
+                </Link>
             </div>
 
             <nav className="nav">
-                <a href="#">Home</a>
-                <a href="#">Movies</a>
+                <Link to="/">Home</Link>
+                <Link to="/movies">Movies</Link>
 
                 <div id="guest">
-                    <a href="#">Register</a>
-                    <a className="log" href="#">Login</a>
+                    <Link to="/register">Register</Link>
+                    <Link className="log" to="/login">Login</Link>
                 </div>
 
                 <div id="user">
-                    <a href="#">Add Movie</a>
-                    <a className="log" href="#">Logout</a>
+                    <Link to="/movies/create">Add Movie</Link>
+                    <Link className="log" to="/logout">Logout</Link>
                 </div>
             </nav>
         </header>
