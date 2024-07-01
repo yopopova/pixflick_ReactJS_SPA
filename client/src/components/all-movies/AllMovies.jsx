@@ -1,4 +1,17 @@
+import { useEffect, useState } from "react";
+
+import * as movieService from '../../services/movieService';
+
 export default function AllMovies() {
+    const [movies, setMovies] = useState([]);
+
+    useEffect(() => {
+        movieService.getAll()
+        .then(result => setMovies(result))
+    }, []);
+
+    console.log(movies);
+
     return (
         <main>
             <div className="all-movies">
