@@ -1,8 +1,29 @@
+import { useNavigate } from 'react-router-dom';
+
+import * as movieService from "../../services/movieService";
+
 export default function AddMovie() {
+    const navigate = useNavigate();
+
+    const craeteMovieSubmitHandler = async (e) => {
+        e.preventDefault();
+
+        const movieData = Object.fromEntries(new FormData(e.currentTarget));
+        // console.log(movieData);
+
+        try {
+            await movieService.create(movieData);
+            navigate('/movies');
+        } catch (error) {
+            // ERROR notification
+            console.log(error);
+        }
+    }
+
     return (
         <main>
             <section id="add-section">
-                <form id="add">
+                <form id="add" onSubmit={craeteMovieSubmitHandler}>
                     <h1>Add Movie</h1>
         
                     <div id="wrapper">
