@@ -1,10 +1,32 @@
 {
-    "db7610d2-ab82-488c-a7b5-6b41fbb65683": {
-        "title": "test game",
-        "category": "Fantasy",
-        "maxLevel": "125",
-        "imageUrl": "https://i.etsystatic.com/39582183/r/il/45396c/4881629201/il_570xN.4881629201_oksp.jpg",
-        "summary": "Very nice game.",
-        "_id": "db7610d2-ab82-488c-a7b5-6b41fbb65683"
+    "1e091623-ca1b-4d01-9da6-2860471a8a46": {
+        "title": "The Hunger Games: The Ballad of Songbirds and Snakes",
+        "genre": "Adventure Fiction",
+        "year": "2023",
+        "poster": "https://m.media-amazon.com/images/M/MV5BOTZmMmY2MzctMjU2Yy00YjJlLTk1NjAtY2U4MmMxOWZkZWY4XkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_.jpg",
+        "wallpaper": "https://images6.alphacoders.com/134/thumb-1920-1342672.jpeg",
+        "trailer": "https://www.youtube.com/embed/RDE6Uz73A7g?si=F1VWszAwMruAIRJd",
+        "description": "Years before he becomes the tyrannical president of Panem, 18-year-old Coriolanus Snow remains the last hope for his fading lineage. With the 10th annual Hunger Games fast approaching, the young Snow becomes alarmed when he's assigned to mentor Lucy Gray Baird from District 12. Uniting their instincts for showmanship and political savvy, they race against time to ultimately reveal who's a songbird and who's a snake.",
+        "_id": "1e091623-ca1b-4d01-9da6-2860471a8a46"
+    },
+    "24049fe5-944d-4d44-9d77-da6a300a784a": {
+        "title": "The Boy and the Heron",
+        "genre": "Anime",
+        "year": "2023",
+        "poster": "https://m.media-amazon.com/images/M/MV5BZjZkNThjNTMtOGU0Ni00ZDliLThmNGUtZmMxNWQ3YzAxZTQ1XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
+        "wallpaper": "https://images.alphacoders.com/134/thumb-1920-1341717.jpeg",
+        "trailer": "https://www.youtube.com/embed/t5khm-VjEu4?si=5S8qhadVcKIHITNb",
+        "description": "Mahito, a young 12-year-old boy, struggles to settle in a new town after his mother's death. However, when a talking heron informs Mahito that his mother is still alive, he enters an abandoned tower in search of her, which takes him to another world.",
+        "_id": "24049fe5-944d-4d44-9d77-da6a300a784a"
+    },
+    "2271b2b8-032d-48df-8f70-a6ba415e3e65": {
+        "title": "The Nun 2",
+        "genre": "Horror",
+        "year": "2023",
+        "poster": "https://picfiles.alphacoders.com/564/564992.jpg",
+        "wallpaper": "https://images6.alphacoders.com/928/thumb-1920-928113.jpg",
+        "trailer": "https://www.youtube.com/embed/QF-oyCwaArU?si=HsEcSfmrF9eKq_FE",
+        "description": "In 1956 France, a priest is murdered, and it seems an evil is spreading. Sister Irene once again comes face to face with a demonic force.",
+        "_id": "2271b2b8-032d-48df-8f70-a6ba415e3e65"
     }
 }
