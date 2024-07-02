@@ -1,4 +1,7 @@
+import { Link } from 'react-router-dom';
+
 export default function SingleMovie({
+    _id,
     title,
     genre,
     year,
@@ -14,7 +17,7 @@ export default function SingleMovie({
                 <h3>{title}</h3>
                 <p>Genre: {genre}</p>
                 <p>Year: {year}</p>
-                <a href="#">Details</a>
+                <Link to={`/movies/${_id}`}>Details</Link>
             </div>
         </div>
     );
