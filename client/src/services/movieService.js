@@ -9,8 +9,8 @@ export const getAll = async () => {
     return Object.values(result);
 }
 
-export const getOne = async (gameId) => {
-    const result = await request.get(`${baseUrl}/${gameId}`);
+export const getOne = async (movieId) => {
+    const result = await request.get(`${baseUrl}/${movieId}`);
 
     return result;
 }
