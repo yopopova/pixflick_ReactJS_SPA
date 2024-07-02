@@ -9,6 +9,12 @@ export const getAll = async () => {
     return Object.values(result);
 }
 
+export const getOne = async (gameId) => {
+    const result = await request.get(`${baseUrl}/${gameId}`);
+
+    return result;
+}
+
 // ADD/CREATE MOVIE
 export const create = async (movieData) => {
     const result = await request.post(baseUrl, movieData);
