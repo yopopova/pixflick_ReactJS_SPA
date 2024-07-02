@@ -8,7 +8,7 @@ export default function AllMovies() {
 
     useEffect(() => {
         movieService.getAll()
-        .then(result => setMovies(result))
+            .then(result => setMovies(result));
     }, []);
 
     console.log(movies);
@@ -21,9 +21,9 @@ export default function AllMovies() {
                 </div>
 
                 <div className="movies">
-                    {movies.map(movie => {
+                    {movies.map(movie => (
                         <SingleMovie key={movie._id} {...movie} />
-                    })}
+                    ))}
                 </div>
 
                 {movies.length === 0 && (
