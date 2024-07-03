@@ -58,7 +58,14 @@ export default function MovieDetails() {
                     <p className="no-comments">There are no comments for this movie yet. Write the first one...</p>
                 </div>
 
+                <div className="create-comment">
+                    <h3>Like this movie? Share your impressions:</h3>
 
+                    <form id="add-comment">
+                        <textarea name="comment" rows="10" cols="68" placeholder="Add a comment..."></textarea>
+                        <input class="comment-btn" type="submit" value="Add Comment" />
+                    </form>
+                </div>
             </section>
         </main>
     );
