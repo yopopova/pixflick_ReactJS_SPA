@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import * as movieService from '../../services/movieService';
+import * as commentService from '../../services/commentService';
 
 export default function MovieDetails() {
     const [movie, setMovie] = useState({});
@@ -11,6 +12,21 @@ export default function MovieDetails() {
         movieService.getOne(movieId)
             .then(setMovie)
     }, [movieId]);
+
+    const addCommentHandles = async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(e.currentTarget);
+
+        // TRY-CATCH
+        const newComment = await commentService.create(
+            movieId,
+            formData.get('username'),
+            formData.get('comment'),
+        );
+
+        console.log(newComment);
+    }
 
     return (
         <main>
@@ -61,9 +77,10 @@ export default function MovieDetails() {
                 <div className="create-comment">
                     <h3>Like this movie? Share your impressions:</h3>
 
-                    <form id="add-comment">
+                    <form id="add-comment" onSubmit={addCommentHandles}>
+                        <input type="text" name="username" placeholder="Enter username..." />
                         <textarea name="comment" rows="10" cols="68" placeholder="Add a comment..."></textarea>
-                        <input class="comment-btn" type="submit" value="Add Comment" />
+                        <input className="comment-btn" type="submit" value="Add Comment" />
                     </form>
                 </div>
             </section>
