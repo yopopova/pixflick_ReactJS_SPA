@@ -12,3 +12,15 @@
 - `Register` view where the user can make registration
 - `Login` view where the user can log into his profile
 - `Logout` option where the user can logout from his profile
+
+## App Details
+
+The app is based on:
+
+- ReactJS
+- JavaScript
+- HTML
+- CSS
+- SoftUni practice server
+- Gradient Magic Backgrounds
+- Font Awesome Icons
