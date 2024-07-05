@@ -6,11 +6,15 @@ import * as commentService from '../../services/commentService';
 
 export default function MovieDetails() {
     const [movie, setMovie] = useState({});
+    const [comments, setComments] = useState([]);
     const { movieId } = useParams();
 
     useEffect(() => {
         movieService.getOne(movieId)
-            .then(setMovie)
+            .then(setMovie);
+
+        commentService.getAll()
+            .then(setComments);
     }, [movieId]);
 
     const addCommentHandles = async (e) => {
@@ -61,17 +65,17 @@ export default function MovieDetails() {
                     <h2>Comments</h2>
 
                     <ul>
-                        <li className="comment">
-                            <p>ivan@gmail.com:</p>
-                            <p>I rate this one quite highly.</p>
-                        </li>
-                        <li className="comment">
-                            <p>nadia@gmail.com:</p>
-                            <p>The best movie.</p>
-                        </li>
+                        {comments.map(({username, text}) => (
+                            <li className="comment">
+                                <p>{username}:</p>
+                                <p>{text}</p>
+                            </li>
+                        ))}
                     </ul>
-
-                    <p className="no-comments">There are no comments for this movie yet. Write the first one...</p>
+                    
+                    {comments.length === 0 && (
+                        <p className="no-comments">There are no comments for this movie yet. Write the first one...</p>
+                    )}
                 </div>
 
                 <div className="create-comment">
