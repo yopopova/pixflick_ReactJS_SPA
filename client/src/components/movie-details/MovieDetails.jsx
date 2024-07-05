@@ -13,7 +13,7 @@ export default function MovieDetails() {
         movieService.getOne(movieId)
             .then(setMovie);
 
-        commentService.getAll()
+        commentService.getAll(movieId)
             .then(setComments);
     }, [movieId]);
 
