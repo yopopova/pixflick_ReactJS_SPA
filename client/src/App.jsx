@@ -23,17 +23,22 @@ function App() {
     const result = await authService.login(values.email, values.password);
     setAuth(result);
     navigate(Path.Home);
-
-    console.log(result);
   };
 
+  const values = {
+    loginSubmitHandler,
+    username: auth.username,
+    email: auth.email,
+    isAuthenticated: !!auth.username,
+  }
+
   return (
-    <AuthContext.Provider value={{ loginSubmitHandler }}>
+    <AuthContext.Provider value={values}>
         <div>
           <Header />
 
           <Routes>
-            <Route path='/' element={<Home />} />
+            <Route path={Path.Home} element={<Home />} />
             <Route path='/movies' element={<AllMovies />} />
             <Route path='/register' element={<Register />} />
             <Route path='/login' element={<Login />} />
