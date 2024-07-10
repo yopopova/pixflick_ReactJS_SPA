@@ -1,11 +1,13 @@
 import * as request from "../lib/request";
 
-const baseUrl = 'http://localhost:3030/jsonstore/movies';
+// const baseUrl = 'http://localhost:3030/jsonstore/movies';
+const baseUrl = 'http://localhost:3030/data/movies';
 
 export const getAll = async () => {
     const result = await request.get(baseUrl);
 
-    return Object.values(result);
+    // return Object.values(result);
+    return result;
 }
 
 export const getOne = async (movieId) => {
