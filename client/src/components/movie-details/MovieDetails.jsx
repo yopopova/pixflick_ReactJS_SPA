@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import * as movieService from '../../services/movieService';
 import * as commentService from '../../services/commentService';
+import AuthContext from "../../contexts/authContext";
 
 export default function MovieDetails() {
+    const { email } = useContext(AuthContext);
+
     const [movie, setMovie] = useState({});
     const [comments, setComments] = useState([]);
     const { movieId } = useParams();
@@ -25,12 +28,11 @@ export default function MovieDetails() {
         // TRY-CATCH
         const newComment = await commentService.create(
             movieId,
-            formData.get('username'),
             formData.get('comment'),
         );
         console.log(newComment);
 
-        setComments(state => [...state, newComment]);
+        setComments(state => [...state, { ...newComment, author: {email} }]);
     }
 
     return (
@@ -66,9 +68,9 @@ export default function MovieDetails() {
                     <h2>Comments</h2>
 
                     <ul>
-                        {comments.map(({_id, username, text}) => (
+                        {comments.map(({ _id, text, owner: { email } }) => (
                             <li key={_id} className="comment">
-                                <p>{username}:</p>
+                                <p>{email}:</p>
                                 <p>{text}</p>
                             </li>
                         ))}
@@ -83,7 +85,6 @@ export default function MovieDetails() {
                     <h3>Like this movie? Share your impressions:</h3>
 
                     <form id="add-comment" onSubmit={addCommentHandler}>
-                        <input type="text" name="username" placeholder="Enter username..." />
                         <textarea name="comment" rows="10" cols="68" placeholder="Add a comment..."></textarea>
                         <input className="comment-btn" type="submit" value="Add Comment" />
                     </form>
