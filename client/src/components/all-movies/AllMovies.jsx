@@ -8,7 +8,10 @@ export default function AllMovies() {
 
     useEffect(() => {
         movieService.getAll()
-            .then(result => setMovies(result));
+            .then(result => setMovies(result))
+            .catch(err => {
+                console.log(err);
+            });
     }, []);
 
     console.log(movies);
