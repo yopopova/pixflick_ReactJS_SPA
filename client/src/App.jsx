@@ -1,7 +1,5 @@
-import { Route, Routes, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 
-import * as authService from './services/authService';
 import { AuthProvider } from './contexts/authContext';
 import Path from './paths';
 
@@ -16,66 +14,25 @@ import MovieDetails from './components/movie-details/MovieDetails';
 import Logout from './components/logout/Logout';
 
 function App() {
-  const navigate = useNavigate();
-  const [auth, setAuth] = useState(() => {
-    localStorage.removeItem('accessToken');
-    return {};
-  });
+    return (
+        <AuthProvider>
+            <div>
+              <Header />
 
-  const loginSubmitHandler = async (values) => {
-    // TRY/CATCH
-    const result = await authService.login(values.email, values.password);
+              <Routes>
+                <Route path={Path.Home} element={<Home />} />
+                <Route path='/movies' element={<AllMovies />} />
+                <Route path='/register' element={<Register />} />
+                <Route path='/login' element={<Login />} />
+                <Route path='/movies/create' element={<AddMovie />} />
+                <Route path='/movies/:movieId' element={<MovieDetails />} />
+                <Route path={Path.Logout} element={<Logout />} />
+              </Routes>
 
-    setAuth(result);
-    localStorage.setItem('accessToken', result.accessToken);
-
-    navigate(Path.Home);
-  };
-
-  const registerSubmitHandler = async (values) => {
-    // TRY/CATCH
-    // Confirm the two passwords
-    const result = await authService.register(values.email, values.password);
-
-    setAuth(result);
-    localStorage.setItem('accessToken', result.accessToken);
-
-    navigate(Path.Home);
-  }
-
-  const logoutHandler = () => {
-    setAuth({});
-    localStorage.removeItem('accessToken');
-  }
-
-  const values = {
-    loginSubmitHandler,
-    registerSubmitHandler,
-    logoutHandler,
-    username: auth.username || auth.email,
-    email: auth.email,
-    isAuthenticated: !!auth.accessToken,
-  }
-
-  return (
-    <AuthProvider value={values}>
-        <div>
-          <Header />
-
-          <Routes>
-            <Route path={Path.Home} element={<Home />} />
-            <Route path='/movies' element={<AllMovies />} />
-            <Route path='/register' element={<Register />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/movies/create' element={<AddMovie />} />
-            <Route path='/movies/:movieId' element={<MovieDetails />} />
-            <Route path={Path.Logout} element={<Logout />} />
-          </Routes>
-
-          <Footer />
-        </div>
-    </AuthProvider>
-  );
+              <Footer />
+            </div>
+        </AuthProvider>
+    );
 }
 
 export default App;
