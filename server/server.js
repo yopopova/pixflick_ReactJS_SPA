@@ -1484,25 +1484,37 @@
     	movies: {
     		"1240549d-f0e0-497e-ab99-eb8f703713d7": {
     			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			title: "Black Widow",
-    			description: "Natasha Romanoff aka Black Widow confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Comes on the screens 2020.",
-    			img: "https://miro.medium.com/max/735/1*akkAa2CcbKqHsvqVusF3-w.jpeg",
+    			title: "The Hunger Games: The Ballad of Songbirds and Snakes",
+                genre: "Adventure Fiction",
+                year: "2023",
+                poster: "https://m.media-amazon.com/images/M/MV5BOTZmMmY2MzctMjU2Yy00YjJlLTk1NjAtY2U4MmMxOWZkZWY4XkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_.jpg",
+                wallpaper: "https://images6.alphacoders.com/134/thumb-1920-1342672.jpeg",
+                trailer: "https://www.youtube.com/embed/RDE6Uz73A7g?si=F1VWszAwMruAIRJd",
+    			description: "Years before he becomes the tyrannical president of Panem, 18-year-old Coriolanus Snow remains the last hope for his fading lineage. With the 10th annual Hunger Games fast approaching, the young Snow becomes alarmed when he's assigned to mentor Lucy Gray Baird from District 12. Uniting their instincts for showmanship and political savvy, they race against time to ultimately reveal who's a songbird and who's a snake.",
     			_createdOn: 1614935055353,
     			_id: "1240549d-f0e0-497e-ab99-eb8f703713d7"
     		},
     		"143e5265-333e-4150-80e4-16b61de31aa0": {
     			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			title: "Wonder Woman 1984",
-    			description: "Diana must contend with a work colleague and businessman, whose desire for extreme wealth sends the world down a path of destruction, after an ancient artifact that grants wishes goes missing.",
-    			img: "https://pbs.twimg.com/media/ETINgKwWAAAyA4r.jpg",
+    			title: "The Boy and the Heron",
+                genre: "Anime",
+                year: "2023",
+                poster: "https://m.media-amazon.com/images/M/MV5BZjZkNThjNTMtOGU0Ni00ZDliLThmNGUtZmMxNWQ3YzAxZTQ1XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
+                wallpaper: "https://tricycle.org/wp-content/uploads/2024/02/boy-and-the-heron-review-1.jpg",
+                trailer: "https://www.youtube.com/embed/t5khm-VjEu4?si=5S8qhadVcKIHITNb",
+    			description: "Mahito, a young 12-year-old boy, struggles to settle in a new town after his mother's death. However, when a talking heron informs Mahito that his mother is still alive, he enters an abandoned tower in search of her, which takes him to another world.",
     			_createdOn: 1614935181470,
     			_id: "143e5265-333e-4150-80e4-16b61de31aa0"
     		},
     		"a9bae6d8-793e-46c4-a9db-deb9e3484909": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			title: "Top Gun 2",
-    			description: "After more than thirty years of service as one of the Navy's top aviators, Pete Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him.",
-    			img: "https://i.pinimg.com/originals/f2/a4/58/f2a458048757bc6914d559c9e4dc962a.jpg",
+    			title: "The Nun 2",
+                genre: "Horror",
+                year: "2023",
+                poster: "https://picfiles.alphacoders.com/564/564992.jpg",
+                wallpaper: "https://images6.alphacoders.com/928/thumb-1920-928113.jpg",
+                trailer: "https://www.youtube.com/embed/QF-oyCwaArU?si=HsEcSfmrF9eKq_FE",
+    			description: "In 1956 France, a priest is murdered, and it seems an evil is spreading. Sister Irene once again comes face to face with a demonic force.",
     			_createdOn: 1614935268135,
     			_id: "a9bae6d8-793e-46c4-a9db-deb9e3484909"
     		}
