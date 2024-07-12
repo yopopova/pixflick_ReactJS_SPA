@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import * as movieService from '../../services/movieService';
 import * as commentService from '../../services/commentService';
@@ -59,8 +59,8 @@ export default function MovieDetails() {
 
                         {isOwner && (
                             <div className="buttons">
-                                <a href="#" className="button">Edit</a>
-                                <a href="#" className="button">Delete</a>
+                                <Link to="/movies/:movieId/edit" className="button">Edit</Link>
+                                <Link to="#" className="button">Delete</Link>
                             </div>
                         )}
                     </div>

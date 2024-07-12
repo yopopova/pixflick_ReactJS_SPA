@@ -12,6 +12,7 @@ import AddMovie from './components/add-movie/AddMovie';
 import Footer from './components/footer/Footer';
 import MovieDetails from './components/movie-details/MovieDetails';
 import Logout from './components/logout/Logout';
+import EditMovie from './components/edit-movie/EditMovie';
 
 function App() {
     return (
@@ -26,6 +27,8 @@ function App() {
                 <Route path='/login' element={<Login />} />
                 <Route path='/movies/create' element={<AddMovie />} />
                 <Route path='/movies/:movieId' element={<MovieDetails />} />
+                <Route path={Path.Edit} element={<EditMovie />} />
+
                 <Route path={Path.Logout} element={<Logout />} />
               </Routes>
 
