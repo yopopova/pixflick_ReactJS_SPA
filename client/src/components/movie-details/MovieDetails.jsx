@@ -1,10 +1,12 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 import * as movieService from '../../services/movieService';
 import * as commentService from '../../services/commentService';
 import AuthContext from "../../contexts/authContext";
 import useForm from "../../hooks/useForm";
+import { pathToUrl } from "../../utils/pathUtils";
+import Path from "../../paths";
 
 export default function MovieDetails() {
     const { email, userId } = useContext(AuthContext);
@@ -37,9 +39,11 @@ export default function MovieDetails() {
         setComments(state => [...state, { ...newComment, owner: {email} }]);
     }
 
-    const {values, onChange, onSubmit} = useForm(addCommentHandler, {
+    const initialValues = useMemo(() => ({
         comment: '',
-    });
+    }), []);
+
+    const {values, onChange, onSubmit} = useForm(addCommentHandler, initialValues);
 
     const isOwner = userId === movie._ownerId;
 
@@ -59,7 +63,7 @@ export default function MovieDetails() {
 
                         {isOwner && (
                             <div className="buttons">
-                                <Link to="/movies/:movieId/edit" className="button">Edit</Link>
+                                <Link to={pathToUrl(Path.Edit, { movieId })} className="button">Edit</Link>
                                 <Link to="#" className="button">Delete</Link>
                             </div>
                         )}
