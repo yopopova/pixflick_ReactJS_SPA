@@ -7,7 +7,7 @@ import AuthContext from "../../contexts/authContext";
 import useForm from "../../hooks/useForm";
 
 export default function MovieDetails() {
-    const { email } = useContext(AuthContext);
+    const { email, userId } = useContext(AuthContext);
     const [movie, setMovie] = useState({});
     const [comments, setComments] = useState([]);
     const { movieId } = useParams();
@@ -41,6 +41,8 @@ export default function MovieDetails() {
         comment: '',
     });
 
+    const isOwner = userId === movie._ownerId;
+
     return (
         <main>
             <section id="details">
@@ -55,10 +57,12 @@ export default function MovieDetails() {
                         <p><span>Year: </span>{movie.year}</p>
                         <p><span>Description: </span>{movie.description}</p>
 
-                        <div className="buttons">
-                            <a href="#" className="button">Edit</a>
-                            <a href="#" className="button">Delete</a>
-                        </div>
+                        {isOwner && (
+                            <div className="buttons">
+                                <a href="#" className="button">Edit</a>
+                                <a href="#" className="button">Delete</a>
+                            </div>
+                        )}
                     </div>
 
                     <div id="movie-trailer">
