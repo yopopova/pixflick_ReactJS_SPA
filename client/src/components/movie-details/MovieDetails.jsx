@@ -4,13 +4,14 @@ import { useParams } from "react-router-dom";
 import * as movieService from '../../services/movieService';
 import * as commentService from '../../services/commentService';
 import AuthContext from "../../contexts/authContext";
+import useForm from "../../hooks/useForm";
 
 export default function MovieDetails() {
     const { email } = useContext(AuthContext);
-
     const [movie, setMovie] = useState({});
     const [comments, setComments] = useState([]);
     const { movieId } = useParams();
+    // const {} = useForm()
 
     useEffect(() => {
         movieService.getOne(movieId)
@@ -20,20 +21,25 @@ export default function MovieDetails() {
             .then(setComments);
     }, [movieId]);
 
-    const addCommentHandler = async (e) => {
-        e.preventDefault();
+    const addCommentHandler = async (values) => {
+        // e.preventDefault();
 
-        const formData = new FormData(e.currentTarget);
+        // const formData = new FormData(e.currentTarget);
 
         // TRY-CATCH
         const newComment = await commentService.create(
             movieId,
-            formData.get('comment'),
+            values.comment,
+            // formData.get('comment'),
         );
         console.log(newComment);
 
-        setComments(state => [...state, { ...newComment, author: {email} }]);
+        setComments(state => [...state, { ...newComment, owner: {email} }]);
     }
+
+    const {values, onChange, onSubmit} = useForm(addCommentHandler, {
+        comment: '',
+    });
 
     return (
         <main>
@@ -84,8 +90,8 @@ export default function MovieDetails() {
                 <div className="create-comment">
                     <h3>Like this movie? Share your impressions:</h3>
 
-                    <form id="add-comment" onSubmit={addCommentHandler}>
-                        <textarea name="comment" rows="10" cols="68" placeholder="Add a comment..."></textarea>
+                    <form id="add-comment" onSubmit={onSubmit}>
+                        <textarea name="comment" rows="10" cols="68" value={values.comment} onChange={onChange} placeholder="Add a comment..."></textarea>
                         <input className="comment-btn" type="submit" value="Add Comment" />
                     </form>
                 </div>
