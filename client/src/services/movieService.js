@@ -21,3 +21,9 @@ export const create = async (movieData) => {
 
     return result;
 }
+
+export const edit = async (gameId, movieData) => {
+    const result = await request.put(`${baseUrl}/${gameId}`, movieData);
+
+    return result;
+}
