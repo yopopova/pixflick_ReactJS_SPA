@@ -1,5 +1,5 @@
 import { useContext, useEffect, useMemo, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 import * as movieService from '../../services/movieService';
 import * as commentService from '../../services/commentService';
@@ -9,6 +9,7 @@ import { pathToUrl } from "../../utils/pathUtils";
 import Path from "../../paths";
 
 export default function MovieDetails() {
+    const navigate = useNavigate();
     const { email, userId } = useContext(AuthContext);
     const [movie, setMovie] = useState({});
     const [comments, setComments] = useState([]);
@@ -39,6 +40,15 @@ export default function MovieDetails() {
         setComments(state => [...state, { ...newComment, owner: {email} }]);
     }
 
+    const deleteButtonClickHandler = async () => {
+        const hasConfirmed = confirm(`Are you sure you want to delete ${movie.title} movie record?`);
+
+        if (hasConfirmed) {
+            await movieService.remove(movieId);
+            navigate('/movies');
+        }
+    }
+
     const initialValues = useMemo(() => ({
         comment: '',
     }), []);
@@ -64,7 +74,7 @@ export default function MovieDetails() {
                         {isOwner && (
                             <div className="buttons">
                                 <Link to={pathToUrl(Path.Edit, { movieId })} className="button">Edit</Link>
-                                <Link to="#" className="button">Delete</Link>
+                                <button className="button" onClick={deleteButtonClickHandler}>Delete</button>
                             </div>
                         )}
                     </div>
