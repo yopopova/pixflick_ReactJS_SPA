@@ -49,11 +49,9 @@ export default function MovieDetails() {
         }
     }
 
-    const initialValues = useMemo(() => ({
+    const {values, onChange, onSubmit} = useForm(addCommentHandler, {
         comment: '',
-    }), []);
-
-    const {values, onChange, onSubmit} = useForm(addCommentHandler, initialValues);
+    });
 
     const isOwner = userId === movie._ownerId;
 
