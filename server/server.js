@@ -1320,13 +1320,15 @@
     var protectedData = {
     	users: {
     		"35c62d76-8152-4626-8712-eeb96381bea8": {
-    			email: "peter@abv.bg",
+    			email: "peter@gmail.com",
     			username: "Peter",
+                avatar: 'https://t4.ftcdn.net/jpg/03/26/98/51/360_F_326985142_1aaKcEjMQW6ULp6oI9MYuv8lN9f8sFmj.jpg',
     			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
     		},
     		"847ec027-f659-4086-8032-5173e2f9c93a": {
-    			email: "george@abv.bg",
-    			username: "George",
+    			email: "maria@gmail.com",
+    			username: "Maria",
+                avatar: 'https://discoverymood.com/wp-content/uploads/2020/04/Mental-Strong-Women-min.jpg',
     			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
     		},
     		"60f0cf0b-34b0-4abd-9769-8c42f830dffc": {
@@ -1517,7 +1519,19 @@
     			description: "In 1956 France, a priest is murdered, and it seems an evil is spreading. Sister Irene once again comes face to face with a demonic force.",
     			_createdOn: 1614935268135,
     			_id: "a9bae6d8-793e-46c4-a9db-deb9e3484909"
-    		}
+    		},
+            "e1b30a20-011b-4cc7-a85c-0bc01a361c79": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                title: "Godzilla x Kong: The New Empire",
+                genre: "Action, Sci-fi",
+                year: "2024",
+                poster: "https://media2.firstshowing.net/firstshowing/img16/GodzillaxKongPosterfinimgIMX5902.jpg?width=599&quality=95",
+                wallpaper: "https://images4.alphacoders.com/135/1355085.jpeg",
+                trailer: "https://www.youtube.com/embed/lV1OOlGwExM?si=dyQN6ltZpa1_lRPx",
+                description: "Godzilla and the almighty Kong face a colossal threat hidden deep within the planet, challenging their very existence and the survival of the human race.",
+                _createdOn: 1721200517543,
+                _id: "e1b30a20-011b-4cc7-a85c-0bc01a361c79",
+            }
     	},
     	likes: {
     	},

@@ -34,6 +34,7 @@ export const getLatest = async () => {
 export const create = async (movieData) => {
     const result = await request.post(baseUrl, movieData);
 
+    console.log(result);
     return result;
 }
 
