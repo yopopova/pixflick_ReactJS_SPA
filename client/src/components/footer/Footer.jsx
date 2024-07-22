@@ -1,6 +1,10 @@
+import { Link } from "react-router-dom";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 // import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
+import MediaLinks from "../../mediaLinks";
 
 export default function Footer() {
     return (
@@ -11,15 +15,15 @@ export default function Footer() {
                 </a>
             </div>
             <div className="footer-social">
-                <a href="https://bg-bg.facebook.com/" target="_blank">
+                <Link to={MediaLinks.Facebook} target="_blank">
                     <FontAwesomeIcon icon={faFacebookF} /> <span>Facebook</span>
-                </a>
-                <a href="https://www.instagram.com/" target="_blank">
+                </Link>
+                <Link to={MediaLinks.Instagram} target="_blank">
                     <FontAwesomeIcon icon={faInstagram} /> <span>Instagram</span>
-                </a>
-                <a href="https://twitter.com/?lang=bg" target="_blank">
+                </Link>
+                <Link to={MediaLinks.Twitter} target="_blank">
                     <FontAwesomeIcon icon={faXTwitter} /> <span>Twitter</span>
-                </a>
+                </Link>
             </div>
     
             <div className="footer-copyright">
