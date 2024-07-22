@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
 
 import * as movieService from '../../services/movieService';
 import LatestMovie from './latest-movie/LatestMovie';
+import Path from '../../paths';
 
 export default function Home() {
     const [latestMovies, setLatestMovies] = useState([]);
@@ -18,8 +20,7 @@ export default function Home() {
                     <h1>Dive into the cinema universe</h1>
         
                     <div id="btns">
-                        <a href="#">Catalog</a>
-                        <a href="#">Join us</a>
+                        <Link to={Path.Catalog}>Catalog</Link>
                     </div>
                 </div>
             </div>

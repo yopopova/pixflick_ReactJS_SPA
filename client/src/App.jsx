@@ -23,13 +23,14 @@ function App() {
 
                 <Routes>
                     <Route path={Path.Home} element={<Home />} />
-                    <Route path='/movies' element={<AllMovies />} />
-                    <Route path='/movies/:movieId' element={<MovieDetails />} />
-                    <Route path='/register' element={<Register />} />
-                    <Route path='/login' element={<Login />} />
+                    <Route path={Path.Catalog} element={<AllMovies />} />
+                    <Route path={Path.Details} element={<MovieDetails />} />
+
+                    <Route path={Path.Register} element={<Register />} />
+                    <Route path={Path.Login} element={<Login />} />
 
                     <Route element={<AuthGuard />}>
-                        <Route path='/movies/create' element={<AddMovie />} />
+                        <Route path={Path.Create} element={<AddMovie />} />
                         <Route path={Path.Edit} element={<EditMovie />} />
                         <Route path={Path.Logout} element={<Logout />} />
                     </Route>
