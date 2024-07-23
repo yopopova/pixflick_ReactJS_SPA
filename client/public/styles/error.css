@@ -1,0 +1,28 @@
+#error-page {
+    background-image: url('https://images.hdqwalls.com/wallpapers/po-in-kung-fu-panda-4-movie-5k-of.jpg');
+    height: 50vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#error-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+#error-text > h1 {
+    font-size: 5vw;
+    text-shadow: 2px 0 10px #000000;
+}
+
+#error-text > h2 {
+    font-size: 2vw;
+    text-shadow: 2px 0 10px #000000;
+}
