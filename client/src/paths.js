@@ -8,6 +8,7 @@ const Path = {
     Register: '/register',
     Login: '/login',
     Logout: '/logout',
+    Error: '*',
 }
 
 export default Path;

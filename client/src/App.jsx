@@ -14,6 +14,7 @@ import MovieDetails from './components/movie-details/MovieDetails';
 import Logout from './components/logout/Logout';
 import EditMovie from './components/edit-movie/EditMovie';
 import AuthGuard from './components/guards/AuthGuard';
+import PageNotFound from './components/page-not-found/PageNotFound';
 
 function App() {
     return (
@@ -34,6 +35,8 @@ function App() {
                         <Route path={Path.Edit} element={<EditMovie />} />
                         <Route path={Path.Logout} element={<Logout />} />
                     </Route>
+
+                    <Route path={Path.Error} element={<PageNotFound />} />
                 </Routes>
 
                 <Footer />
