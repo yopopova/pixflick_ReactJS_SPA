@@ -31,7 +31,7 @@ export default function Home() {
                 </div>
         
                 <div className="films">
-                    {latestMovies.map(movie => <LatestMovie {...movie} />)}
+                    {latestMovies.map(movie => <LatestMovie key={movie._id} {...movie} />)}
 
                     {latestMovies.length === 0 && (
                         <div className="no-movies">
