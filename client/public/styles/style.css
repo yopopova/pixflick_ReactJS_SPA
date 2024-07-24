@@ -2,9 +2,10 @@
 @import url(nav.css);
 
 @import url(home.css);
-@import url(forms.css);
 @import url(catalog.css);
 @import url(details.css);
+@import url(forms.css);
+@import url(profile.css);
 @import url(error.css);
 
 @import url(footer.css);
