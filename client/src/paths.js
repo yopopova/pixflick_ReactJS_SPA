@@ -5,6 +5,7 @@ const Path = {
     Create: '/movies/create',
     Edit: '/movies/:movieId/edit',
     Delete: '/movies/:movieId/delete',
+    Profile: '/profile',
     Register: '/register',
     Login: '/login',
     Logout: '/logout',

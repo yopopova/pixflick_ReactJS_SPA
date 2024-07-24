@@ -31,6 +31,7 @@ export default function Header() {
                 {isAuthenticated && (
                     <div id="user">
                         <Link to="/movies/create">Add Movie</Link>
+                        <Link to="/profile">{username}'s Profile</Link>
                         <Link className="log" to="/logout">Logout</Link>
                         <span style={{color: 'white'}}>{username}</span>
                     </div>
