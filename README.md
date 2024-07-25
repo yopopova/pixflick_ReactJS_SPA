@@ -36,3 +36,17 @@ In the repository you will find four folders:
 - `styles` folder contains the app's initial CSS files
 - `views` folder contains the app's initial HTML files
 
+## How to Start/Stop the App
+
+After downloading the application on your computer, you must first type `npm install` in your VS Code terminal to install `node_modules` folder. Then I suggest you to open two terminals in VS Code. Name the first one `client` and the other one `server` to distinguish them. In the `server` terminal, type `cd server` to enter the server folder, and then run the `node server.js` command to start the server. Then click on `client` terminal and type `cd client` command to enter the client folder. Then type `npm run dev` command to start the front-end part of the application. The following will appear in the `client` terminal:
+
+
+```
+VITE v5.3.1  ready in 1002 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+```
+
+Click on `http://localhost:5173/` to open the app in your browser. After you finish working with the application, click on `client` terminal and press the `Ctrl+C` command to stop the front-end part of the application. Then click on the `server` terminal and press the same `Ctrl+C` command to stop the server.
