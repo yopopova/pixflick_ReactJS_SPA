@@ -9,6 +9,7 @@
 - `Edit Movie` view where the user can edit a movie if he is the creator of that movie
 - `Delete Movie` option where the user can delete a movie if he is the creator of that movie
 - `Add Comment` option where the logged-in users can write a comment for a movie
+- `Profile` view with user information
 - `Register` view where the user can make registration
 - `Login` view where the user can log into his profile
 - `Logout` option where the user can logout from his profile
@@ -21,6 +22,17 @@ The app is based on:
 - JavaScript
 - HTML
 - CSS
-- SoftUni practice server
+- RESTful API
+- SoftUni Practice Server as Database
 - Gradient Magic Backgrounds
 - Font Awesome Icons
+
+## Project Content
+
+In the repository you will find four folders:
+
+- `client` folder contains the app's front-end part
+- `server` folder contains the app's back-end part
+- `styles` folder contains the app's initial CSS files
+- `views` folder contains the app's initial HTML files
+
