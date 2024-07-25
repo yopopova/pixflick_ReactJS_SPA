@@ -28,7 +28,7 @@ export const AuthProvider = ({
     const registerSubmitHandler = async (values) => {
       // TRY/CATCH
       // Confirm the two passwords
-      const result = await authService.register(values.email, values.password);
+      const result = await authService.register(values.username, values.avatar, values.email, values.password);
 
       setAuth(result);
       localStorage.setItem('accessToken', result.accessToken);
@@ -41,11 +41,13 @@ export const AuthProvider = ({
       localStorage.removeItem('accessToken');
     }
 
+    // Here we add all things we want to have in the browser Application tab!
     const values = {
       loginSubmitHandler,
       registerSubmitHandler,
       logoutHandler,
       username: auth.username || auth.email,
+      avatar: auth.avatar,
       email: auth.email,
       userId: auth._id,
       isAuthenticated: !!auth.accessToken,

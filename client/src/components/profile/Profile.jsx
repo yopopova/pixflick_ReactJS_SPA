@@ -1,20 +1,27 @@
+import { useContext } from "react";
+
+import AuthContext from "../../contexts/authContext";
+
 export default function Profile() {
+    const { username, avatar, email } = useContext(AuthContext);
+    // console.log(username);
+
     return (
         <main>
             <div className="my-profile">
                 <div className="profile-heading">
-                    <h1>My profile</h1>
+                    <h1>Hello, {username}!</h1>
                 </div>
 
                 <div className="profile">
                     <div className="user-card">
                         <div className="user-img">
-                            <img src="https://discoverymood.com/wp-content/uploads/2020/04/Mental-Strong-Women-min.jpg" alt="maria" />
+                            <img src={avatar} alt={`${username}'s avatar`} />
                         </div>
 
                         <div className="user-info">
-                            <p><span>Username:</span> Maria</p>
-                            <p><span>Email:</span> maria@gmail.com</p>
+                            <p><span>Username: </span>{username}</p>
+                            <p><span>Email: </span>{email}</p>
                         </div>
                     </div>
                 </div>
