@@ -1322,19 +1322,19 @@
     		"35c62d76-8152-4626-8712-eeb96381bea8": {
     			email: "peter@gmail.com",
     			username: "Peter",
-                avatar: 'https://t4.ftcdn.net/jpg/03/26/98/51/360_F_326985142_1aaKcEjMQW6ULp6oI9MYuv8lN9f8sFmj.jpg',
+                avatar: "https://t4.ftcdn.net/jpg/03/26/98/51/360_F_326985142_1aaKcEjMQW6ULp6oI9MYuv8lN9f8sFmj.jpg",
     			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
     		},
     		"847ec027-f659-4086-8032-5173e2f9c93a": {
     			email: "maria@gmail.com",
     			username: "Maria",
-                avatar: 'https://discoverymood.com/wp-content/uploads/2020/04/Mental-Strong-Women-min.jpg',
+                avatar: "https://discoverymood.com/wp-content/uploads/2020/04/Mental-Strong-Women-min.jpg",
     			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
     		},
     		"60f0cf0b-34b0-4abd-9769-8c42f830dffc": {
     			email: "admin@abv.bg",
     			username: "Admin",
-                avatar: 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png',
+                avatar: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
     			hashedPassword: "fac7060c3e17e6f151f247eacb2cd5ae80b8c36aedb8764e18a41bbdc16aa302"
     		}
     	},
@@ -1515,7 +1515,7 @@
                 genre: "Horror",
                 year: "2023",
                 poster: "https://picfiles.alphacoders.com/564/564992.jpg",
-                wallpaper: "https://images6.alphacoders.com/928/thumb-1920-928113.jpg",
+                wallpaper: "https://images2.alphacoders.com/936/thumb-1920-936582.jpg",
                 trailer: "https://www.youtube.com/embed/QF-oyCwaArU?si=HsEcSfmrF9eKq_FE",
     			description: "In 1956 France, a priest is murdered, and it seems an evil is spreading. Sister Irene once again comes face to face with a demonic force.",
     			_createdOn: 1614935268135,
