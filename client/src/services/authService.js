@@ -4,7 +4,6 @@ const baseUrl = 'http://localhost:3030/users';
 
 export const login = async (email, password) => {
     const result = await request.post(`${baseUrl}/login`, {
-        // Here we can add input fields like username and avatar!!!
         email,
         password,
     });
