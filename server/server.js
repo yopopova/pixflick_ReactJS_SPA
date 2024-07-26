@@ -1322,7 +1322,7 @@
     		"35c62d76-8152-4626-8712-eeb96381bea8": {
     			email: "peter@gmail.com",
     			username: "Peter",
-                avatar: "https://t4.ftcdn.net/jpg/03/26/98/51/360_F_326985142_1aaKcEjMQW6ULp6oI9MYuv8lN9f8sFmj.jpg",
+                avatar: "https://img.freepik.com/premium-photo/portrait-smiling-young-man-looking-camera_33839-1731.jpg",
     			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
     		},
     		"847ec027-f659-4086-8032-5173e2f9c93a": {
