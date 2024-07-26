@@ -16,6 +16,7 @@ import EditMovie from './components/edit-movie/EditMovie';
 import AuthGuard from './components/guards/AuthGuard';
 import PageNotFound from './components/page-not-found/PageNotFound';
 import Profile from './components/profile/Profile';
+import GuestGuard from './components/guards/GuestGuard';
 
 function App() {
     return (
@@ -28,8 +29,10 @@ function App() {
                     <Route path={Path.Catalog} element={<AllMovies />} />
                     <Route path={Path.Details} element={<MovieDetails />} />
 
-                    <Route path={Path.Register} element={<Register />} />
-                    <Route path={Path.Login} element={<Login />} />
+                    <Route element={<GuestGuard />}>
+                        <Route path={Path.Register} element={<Register />} />
+                        <Route path={Path.Login} element={<Login />} />
+                    </Route>
 
                     <Route element={<AuthGuard />}>
                         <Route path={Path.Create} element={<AddMovie />} />
