@@ -16,6 +16,14 @@ export const getOne = async (movieId) => {
     return result;
 }
 
+export const getUserMovies = async (userId) => {
+    const result = await request.get(baseUrl);
+
+    const userMovies = result.filter((movie) => movie._ownerId === userId);
+
+    return userMovies;
+}
+
 export const getLatest = async () => {
     const result = await request.get(`${baseUrl}?sortBy=_createdOn%20desc&offset=0&pageSize=3`);
 
