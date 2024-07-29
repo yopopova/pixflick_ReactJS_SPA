@@ -17,23 +17,29 @@ export const AuthProvider = ({
 
     const loginSubmitHandler = async (values) => {
       // TRY/CATCH
-      const result = await authService.login(values.email, values.password);
+      try {
+        const result = await authService.login(values.email, values.password);
+        setAuth(result);
 
-      setAuth(result);
-      localStorage.setItem('accessToken', result.accessToken);
-
-      navigate(Path.Home);
+        localStorage.setItem('accessToken', result.accessToken);
+        navigate(Path.Home);
+      } catch (error) {
+        console.log(error);
+      }
     };
 
     const registerSubmitHandler = async (values) => {
       // TRY/CATCH
       // Confirm the two passwords
-      const result = await authService.register(values.username, values.avatar, values.email, values.password);
+      try {
+        const result = await authService.register(values.username, values.avatar, values.email, values.password);
+        setAuth(result);
 
-      setAuth(result);
-      localStorage.setItem('accessToken', result.accessToken);
-
-      navigate(Path.Home);
+        localStorage.setItem('accessToken', result.accessToken);
+        navigate(Path.Home);
+      } catch (error) {
+        console.log(error);
+      }
     }
 
     const logoutHandler = () => {

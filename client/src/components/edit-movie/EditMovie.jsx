@@ -23,6 +23,9 @@ export default function EditMovie() {
         movieService.getOne(movieId)
             .then(result => {
                 setMovie(result);
+            })
+            .catch(error => {
+                console.log(error);
             });
     }, [movieId]);
 

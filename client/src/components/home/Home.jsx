@@ -11,6 +11,9 @@ export default function Home() {
     useEffect(() => {
         movieService.getLatest()
             .then(result => setLatestMovies(result))
+            .catch(error => {
+                console.log(error);
+            });
     }, []);
 
     return (

@@ -14,30 +14,38 @@ export default function MovieDetails() {
     const [movie, setMovie] = useState({});
     const [comments, setComments] = useState([]);
     const { movieId } = useParams();
-    // const {} = useForm()
 
     useEffect(() => {
         movieService.getOne(movieId)
-            .then(setMovie);
+            .then(setMovie)
+            .catch(err => {
+                console.log(err);
+            });
 
         commentService.getAll(movieId)
-            .then(setComments);
+            .then(setComments)
+            .catch(err => {
+                console.log(err);
+            });
     }, [movieId]);
 
     const addCommentHandler = async (values) => {
         // e.preventDefault();
-
         // const formData = new FormData(e.currentTarget);
 
         // TRY-CATCH
-        const newComment = await commentService.create(
-            movieId,
-            values.comment,
-            // formData.get('comment'),
-        );
-        console.log(newComment);
-
-        setComments(state => [...state, { ...newComment, owner: {email} }]);
+        try {
+            const newComment = await commentService.create(
+                movieId,
+                values.comment,
+                // formData.get('comment'),
+            );
+            console.log(newComment);
+    
+            setComments(state => [...state, { ...newComment, owner: {email} }]);
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     const deleteButtonClickHandler = async () => {
