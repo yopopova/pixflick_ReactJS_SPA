@@ -13,17 +13,18 @@
 - `Register` view where the user can make registration
 - `Login` view where the user can log into his profile
 - `Logout` option where the user can logout from his profile
+- `404` view that is displayed when a user enters a link that does not exist
 
 ## App Details
 
 The app is based on:
 
-- ReactJS
+- ReactJS (v18.2.0)
 - JavaScript
 - HTML
 - CSS
 - RESTful API
-- SoftUni Practice Server as Database
+- SoftUni Practice Server (as Database)
 - Gradient Magic Backgrounds
 - Font Awesome Icons
 
