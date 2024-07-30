@@ -1,11 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { Link } from "react-router-dom";
 
 import * as movieService from '../../services/movieService';
 import LatestMovie from './latest-movie/LatestMovie';
+import AuthContext from "../../contexts/authContext";
 import Path from '../../paths';
 
 export default function Home() {
+    const { isAuthenticated } = useContext(AuthContext);
+
     const [latestMovies, setLatestMovies] = useState([]);
 
     useEffect(() => {
@@ -24,6 +27,10 @@ export default function Home() {
         
                     <div id="btns">
                         <Link to={Path.Catalog}>Catalog</Link>
+
+                        {!isAuthenticated && (
+                            <Link to={Path.Register}>Join us</Link>
+                        )}
                     </div>
                 </div>
             </div>
