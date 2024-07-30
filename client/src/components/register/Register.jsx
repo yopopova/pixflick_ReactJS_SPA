@@ -1,7 +1,9 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 import AuthContext from "../../contexts/authContext";
 import useForm from "../../hooks/useForm";
+import Path from '../../paths';
 
 const RegisterFormKeys = {
     Username: 'username',
@@ -81,7 +83,7 @@ export default function Register() {
 
                         <input type="submit" className="submit-btn" value="Register" />
 
-                        <p>Already have an account? <a href="#">Login</a></p>
+                        <p>Already have an account? <Link to={Path.Login}>Login</Link></p>
                     </div>
                 </form>
             </section>
