@@ -23,7 +23,7 @@ export default function Profile() {
 
     return (
         <main>
-            <div className="my-profile">
+            <div className="all-movies">
                 <div className="profile-heading">
                     <h1>Hello, {username}!</h1>
                 </div>
@@ -38,22 +38,24 @@ export default function Profile() {
                             <p><span>Username: </span>{username}</p>
                             <p><span>Email: </span>{email}</p>
                         </div>
-                    </div>
+                    </div>                    
                 </div>
-            </div>
 
-            <div className="all-movies">
+                <div className="profile-heading">
+                    <h1>Your Movies</h1>
+                </div>
+
                 <div className="movies">
                     {movies.map(movie => (
                         <SingleMovie key={movie._id} {...movie} />
                     ))}
                 </div>
 
-                {/* {movies.length === 0 && (
-                <div className="no-movies">
-                    <p>No movies added yet...</p>
-                </div>
-                )} */}
+                {movies.length === 0 && (
+                    <div className="no-movies">
+                        <p>You have no movies added yet.</p>
+                    </div>
+                )}
             </div>
         </main>
     );
