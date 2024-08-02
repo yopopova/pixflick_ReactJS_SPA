@@ -131,3 +131,18 @@ textarea {
     padding: 8px 15px;
     width: 9em;
 }
+
+.details-login {
+    font-size: 1vw;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #E50914;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 20px #000000;
+    margin-top: 20px;
+    padding: 8px 15px;
+    width: 5em;
+}
