@@ -10,7 +10,7 @@ import Path from "../../paths";
 
 export default function MovieDetails() {
     const navigate = useNavigate();
-    const { email, userId } = useContext(AuthContext);
+    const { isAuthenticated, email, userId } = useContext(AuthContext);
     const [movie, setMovie] = useState({});
     const [comments, setComments] = useState([]);
     const { movieId } = useParams();
@@ -107,17 +107,23 @@ export default function MovieDetails() {
                     </ul>
                     
                     {comments.length === 0 && (
-                        <p className="no-comments">There are no comments for this movie yet. Write the first one...</p>
+                        <p className="no-comments">There are no comments for this movie yet. Write the first one.</p>
                     )}
                 </div>
 
                 <div className="create-comment">
-                    <h3>Like this movie? Share your impressions:</h3>
+                    <h3>Like this movie? Share your impressions.</h3>
 
-                    <form id="add-comment" onSubmit={onSubmit}>
-                        <textarea name="comment" rows="10" cols="68" value={values.comment} onChange={onChange} placeholder="Add a comment..."></textarea>
-                        <input className="comment-btn" type="submit" value="Add Comment" />
-                    </form>
+                    {isAuthenticated && (
+                        <form id="add-comment" onSubmit={onSubmit}>
+                            <textarea name="comment" rows="10" cols="68" value={values.comment} onChange={onChange} placeholder="Add a comment..."></textarea>
+                            <input className="comment-btn" type="submit" value="Add Comment" />
+                        </form>
+                    )}
+                    
+                    {!isAuthenticated && (
+                        <Link className="details-login" to={Path.Login}>Login</Link>
+                    )}
                 </div>
             </section>
         </main>
