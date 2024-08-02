@@ -56,3 +56,24 @@ Click on `http://localhost:5173/` to open the app in your browser. After you fin
 
 Please keep in mind that the database is based on SoftUni Practice Server created by [Viktor Kostadinov](https://github.com/viktorpts) and is not persistent. This means that you can register users, log in to your user profile, and create movie recordings, but when you restart the server the data you made will be lost and the database will return to its initial state. If you want to know more about working with SoftUni Practice Server and its additional features you can [follow this link](https://github.com/softuni-practice-server/softuni-practice-server).
 
+## Movie Record in Database
+
+Every movie record in the database has the following structure:
+
+```
+movies: {
+    "movieId": {
+        "_ownerId": "ownerId",
+        "title": "Movie Title",
+        "genre": "Movie Genre",
+        "year": "Movie Year",
+        "poster": "Movie Poster",
+        "wallpaper": "Movie Wallpaper",
+        "trailer": "Movie Trailer",
+        "description": "Movie Description",
+        "_createdOn": 0101010101,
+        "_id": "movieId",
+    }
+}
+```
+
