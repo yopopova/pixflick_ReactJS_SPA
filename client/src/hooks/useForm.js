@@ -10,10 +10,16 @@ export default function useForm(submitHandler, initialValues) {
         }));
     }
 
+    const resetFormHandler = () => {
+        setValues(initialValues);
+        // setErrors({}); // With this we will return erros into their initial state
+    }
+
     const onSubmit = (e) => {
         e.preventDefault();
 
         submitHandler(values);
+        resetFormHandler();
     }
 
     return {
