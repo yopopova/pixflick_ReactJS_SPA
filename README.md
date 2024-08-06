@@ -86,3 +86,8 @@ For the app data, the following endpoints are supported:
 - `PUT /data/movies/:id` - to edit a movie
 - `DELETE /data/movies/:id` - to delete a movie
 
+For the comments, the following endpoints are supported:
+
+- `GET /data/comments` - to get all the comments for the current record
+- `POST /data/comments` - to create a new comment
+
