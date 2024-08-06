@@ -91,3 +91,10 @@ For the comments, the following endpoints are supported:
 - `GET /data/comments` - to get all the comments for the current record
 - `POST /data/comments` - to create a new comment
 
+For the user, the following endpoints are supported:
+
+- `POST /users/register` - for user registration
+- `POST /users/login` - for user login
+- `GET /users/logout` - for user logout
+- `GET /users/me` - to get the information for logged in user and populate it in the user's profile
+
