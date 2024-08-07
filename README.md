@@ -42,7 +42,7 @@ In the repository you will find four folders:
 After downloading the application on your computer, you must first type `npm install` in your VS Code terminal to install `node_modules` folder. Then I suggest you to open two terminals in VS Code. Name the first one `client` and the other one `server` to distinguish them. In the `server` terminal, type `cd server` to enter the server folder, and then run the `node server.js` command to start the server. Then click on `client` terminal and type `cd client` command to enter the client folder. Then type `npm run dev` command to start the front-end part of the application. The following will appear in the `client` terminal:
 
 
-```
+```javascript
 VITE v5.3.1  ready in 1002 ms
 
   ➜  Local:   http://localhost:5173/
@@ -60,7 +60,7 @@ Please keep in mind that the database is based on SoftUni Practice Server create
 
 Every movie record in the database has the following structure:
 
-```
+```javascript
 movies: {
     "movieId": {
         "_ownerId": "ownerId",
@@ -97,4 +97,22 @@ For the user, the following endpoints are supported:
 - `POST /users/login` - for user login
 - `GET /users/logout` - for user logout
 - `GET /users/me` - to get the information for logged in user and populate it in the user's profile
+
+## Premade Accounts
+
+The app database comes with the following premade user accounts, which you may use for login:
+
+```javascript
+{
+    "email": "peter@gmail.com",
+    "password": "123456" 
+}
+```
+and
+```javascript
+{
+    "email": "maria@gmail.com",
+    "password": "123456" 
+}
+```
 
