@@ -116,3 +116,7 @@ and
 }
 ```
 
+## Screenshots
+
+![pixflick_screenshots_1](https://github.com/user-attachments/assets/4726e433-7346-46ba-abfc-802621dda83c)
+![pixflick_screenshots_2](https://github.com/user-attachments/assets/1d1b6f41-20f8-4389-b493-4393bb12ed1a)
