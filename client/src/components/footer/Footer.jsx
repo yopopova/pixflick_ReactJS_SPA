@@ -2,19 +2,22 @@ import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
-// import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
+import footerStyles from './Footer.module.css';
 import MediaLinks from "../../mediaLinks";
 
 export default function Footer() {
     return (
-        <footer className="footer">
-            <div className="footer-logo">
-                <a href="#">
-                    <span className="red">pix</span><span className="white">flick</span><span className="red">.</span>
-                </a>
+        <footer className={footerStyles.footer}>
+            <div className={footerStyles.logo}>
+                <Link to="/">
+                    <span className={footerStyles.red}>pix</span>
+                    <span className={footerStyles.white}>flick</span>
+                    <span className={footerStyles.red}>.</span>
+                </Link>
             </div>
-            <div className="footer-social">
+
+            <div className={footerStyles.social}>
                 <Link to={MediaLinks.Facebook} target="_blank">
                     <FontAwesomeIcon icon={faFacebookF} /> <span>Facebook</span>
                 </Link>
@@ -26,7 +29,7 @@ export default function Footer() {
                 </Link>
             </div>
     
-            <div className="footer-copyright">
+            <div className={footerStyles.copyright}>
                 <p>&copy; pixflick - 2024 | All rights reserved.</p>
             </div>
         </footer>
