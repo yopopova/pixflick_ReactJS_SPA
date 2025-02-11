@@ -1,6 +1,8 @@
 import { useEffect, useState, useContext } from 'react';
 import { Link } from "react-router-dom";
 
+import homeStyles from './Home.module.css';
+
 import * as movieService from '../../services/movieService';
 import LatestMovie from './latest-movie/LatestMovie';
 import AuthContext from "../../contexts/authContext";
@@ -21,11 +23,11 @@ export default function Home() {
 
     return (
         <main>
-            <div id="hero-image">
-                <div id="banner-text">
+            <div className={homeStyles.banner}>
+                <div className={homeStyles.text}>
                     <h1>Dive into the cinema universe</h1>
         
-                    <div id="btns">
+                    <div className={homeStyles.btns}>
                         <Link to={Path.Catalog}>Catalog</Link>
 
                         {!isAuthenticated && (
@@ -35,21 +37,20 @@ export default function Home() {
                 </div>
             </div>
         
-            <div className="latest-movies">
-                <div className="heading">
+            <div className={homeStyles.latest}>
+                <div className={homeStyles.heading}>
                     <h1>Latest movies</h1>
                 </div>
         
-                <div className="films">
+                <div className={homeStyles.films}>
                     {latestMovies.map(movie => <LatestMovie key={movie._id} {...movie} />)}
 
                     {latestMovies.length === 0 && (
-                        <div className="no-movies">
+                        <div className={homeStyles.empty}>
                             <p>No movies added yet...</p>
                         </div>
                     )}
                 </div>
-
             </div>
         </main>
     );
