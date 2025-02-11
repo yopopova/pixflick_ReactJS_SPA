@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
-import Path from "../../../paths";
+
+import latestMovie from './LatestMovie.module.css';
+
 import { pathToUrl } from "../../../utils/pathUtils";
+import Path from "../../../paths";
 
 export default function LatestMovie({
     _id,
@@ -10,12 +13,12 @@ export default function LatestMovie({
     poster,
 }) {
     return (
-        <div className="film-card">
-            <div className="film-img">
+        <div className={latestMovie.card}>
+            <div className={latestMovie.poster}>
                 <img src={poster} alt={title} />
             </div>
 
-            <div className="film-info">
+            <div className={latestMovie.info}>
                 <h3>{title}</h3>
                 <p>Genre: {genre}</p>
                 <p>Year: {year}</p>
