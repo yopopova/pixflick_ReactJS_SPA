@@ -1,0 +1,45 @@
+.card {
+    width: 30%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.poster {
+    padding: 0 20px;
+}
+
+.poster > img {
+    width: 200px;
+    height: 300px;
+    border-radius: 8px;
+}
+
+.info {
+    color: #ffffff;
+}
+
+.info > h3 {
+    padding-bottom: 20px;
+}
+
+.info p:last-of-type {
+    margin-bottom: 30px;
+}
+
+.info > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #E50914;
+    text-align: center;
+    font-size: 1vw;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 8px 15px;
+    width: 7em;
+} 
