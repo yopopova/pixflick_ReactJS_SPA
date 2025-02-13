@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 
+import loginStyles from "./Login.module.css";
+
 import useForm from "../../hooks/useForm";
 import AuthContext from "../../contexts/authContext";
-import Path from '../../paths';
+import Path from "../../paths";
 
 const LoginFormKeys = {
     Email: 'email',
@@ -19,11 +21,11 @@ export default function Login() {
 
     return (
         <main>
-            <section id="login-section">
-                <form id="login" onSubmit={onSubmit}>
+            <section className={loginStyles.login}>
+                <form className={loginStyles.form} onSubmit={onSubmit}>
                     <h1>Log in to your account</h1>
 
-                    <div id="wrapper">
+                    <div className={loginStyles.wrapper}>
                         <label htmlFor="email">Email:</label>
                         <input
                             type="email" 
@@ -44,7 +46,7 @@ export default function Login() {
                             value={values[LoginFormKeys.Password]} 
                         />
 
-                        <input type="submit" className="submit-btn" value="Login" />
+                        <input type="submit" className={loginStyles.submit} value="Login" />
 
                         <p>Don't have a profile? <Link to={Path.Register}>Join us</Link> </p>
                     </div>
