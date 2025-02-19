@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 
+import addMovieStyles from './AddMovie.module.css';
+
 import * as movieService from "../../services/movieService";
 
 export default function AddMovie() {
@@ -22,11 +24,11 @@ export default function AddMovie() {
 
     return (
         <main>
-            <section id="add-section">
-                <form id="add" onSubmit={craeteMovieSubmitHandler}>
+            <section className={addMovieStyles.add}>
+                <form className={addMovieStyles.form} onSubmit={craeteMovieSubmitHandler}>
                     <h1>Add Movie</h1>
         
-                    <div id="wrapper">
+                    <div className={addMovieStyles.wrapper}>
                         <label htmlFor="title">Title:</label>
                         <input type="text" id="title" name="title" placeholder="Enter title" />
         
@@ -48,7 +50,7 @@ export default function AddMovie() {
                         <label htmlFor="description">Description:</label>
                         <textarea id="description" name="description" rows="5" cols="34" placeholder="Add description"></textarea>
         
-                        <input type="submit" className="submit-btn" value="Add" />
+                        <input type="submit" className={addMovieStyles.submit} value="Add" />
                     </div>
                 </form>
             </section>
