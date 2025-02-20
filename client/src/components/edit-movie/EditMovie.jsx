@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
+import editMovieStyles from './EditMovie.module.css';
+
 import * as movieService from "../../services/movieService";
 // import useForm from '../../hooks/useForm';
 
@@ -54,11 +56,11 @@ export default function EditMovie() {
 
     return (
         <main>
-            <section id="add-section">
-                <form id="add" onSubmit={editMovieSubmitHandler}>
+            <section className={editMovieStyles.edit}>
+                <form className={editMovieStyles.form} onSubmit={editMovieSubmitHandler}>
                     <h1>Edit Movie</h1>
         
-                    <div id="wrapper">
+                    <div className={editMovieStyles.wrapper}>
                         <label htmlFor="title">Title:</label>
                         <input type="text" id="title" name="title" value={movie.title} onChange={onChange} placeholder="Enter title" />
         
@@ -80,7 +82,7 @@ export default function EditMovie() {
                         <label htmlFor="description">Description:</label>
                         <textarea id="description" name="description" rows="5" cols="34" value={movie.description} onChange={onChange} placeholder="Add description"></textarea>
         
-                        <input type="submit" className="submit-btn" value="Edit" />
+                        <input type="submit" className={editMovieStyles.submit} value="Edit" />
                     </div>
                 </form>
             </section>
