@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 
+import registerStyles from './Register.module.css';
+
 import AuthContext from "../../contexts/authContext";
 import useForm from "../../hooks/useForm";
 import Path from '../../paths';
@@ -26,11 +28,11 @@ export default function Register() {
 
     return (
         <main>
-            <section id="register-section">
-                <form id="register" onSubmit={onSubmit}>
+            <section className={registerStyles.register}>
+                <form className={registerStyles.form} onSubmit={onSubmit}>
                     <h1>Create an account</h1>
 
-                    <div id="wrapper">
+                    <div className={registerStyles.wrapper}>
                         <label htmlFor="username">Username:</label>
                         <input
                             type="text"
@@ -81,7 +83,7 @@ export default function Register() {
                             values={values[RegisterFormKeys.ConfirmPassword]}
                         />
 
-                        <input type="submit" className="submit-btn" value="Register" />
+                        <input type="submit" className={registerStyles.submit} value="Register" />
 
                         <p>Already have an account? <Link to={Path.Login}>Login</Link></p>
                     </div>
