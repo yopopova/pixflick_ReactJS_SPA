@@ -44,3 +44,20 @@
 .copyright {
     color: #ffffff;
 } 
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        flex-direction: column;
+    }
+
+    .social {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+        margin: 25px 0;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+}
