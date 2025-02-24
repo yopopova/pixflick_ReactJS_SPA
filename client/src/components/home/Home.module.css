@@ -1,6 +1,7 @@
 .banner {
     background-image: url('https://images3.alphacoders.com/135/thumb-1920-1358834.jpeg');
     height: 40vw;
+    width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -79,4 +80,24 @@
 
 .empty p {
     font-size: 1.3em;
+}
+
+@media screen and (max-width: 1024px) {
+    .banner {
+        height: 80vw;
+    }
+
+    .text > h1 {
+        font-size: 5vw;
+    }
+
+    .btns {
+        flex-direction: column;
+    }
+
+    .btns a {
+        font-size: 1.05em;
+        width: 7em;
+        margin: auto;
+    }
 }
